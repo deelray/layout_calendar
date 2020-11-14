@@ -1,0 +1,18 @@
+@mixin day-of-week() {
+  $days: (
+    tue: 1,
+    wed: 2,
+    thu: 3,
+    fri: 4,
+    sat: 5,
+    sun: 6,
+  );
+
+  @each $name, $day in $days {
+    .calendar-#{$name} {
+      div:nth-child(1) {
+        margin-left: $block-to-right * $day;
+      }
+    }
+  }
+}

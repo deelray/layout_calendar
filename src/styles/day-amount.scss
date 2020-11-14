@@ -1,0 +1,11 @@
+@mixin day-amount() {
+  @for $m from 28 through 31 {
+    .calendar-#{$m} {
+      @for $i from 1 through $m {
+        div:nth-child(#{$i}) {
+          @include block($i);
+        }
+      }
+    }
+  }
+}

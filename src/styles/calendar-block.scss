@@ -1,0 +1,23 @@
+@mixin block($a) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $calendar-fonts;
+  font-size: $calendar-text-size;
+  width: $calendar-size-block;
+  height: $calendar-size-block;
+  background-color: $block-color;
+  border: $block-border;
+  transition-duration: 0.5s;
+
+  &::after {
+    content: "#{$a}";
+  }
+
+  &:hover {
+    background-color: $block-color-hover;
+    cursor: pointer;
+    margin-top: -20px;
+  }
+}
