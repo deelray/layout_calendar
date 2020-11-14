@@ -1,3 +1,23 @@
+@import "variables.scss";
+@import "calendar-block.scss";
+@import "day-of-week.scss";
+@import "day-amount.scss";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  width: $calendar-size;
+  margin: 10vh auto;
+}
+
+@include day-amount();
+@include day-of-week();
